@@ -5,14 +5,14 @@ const Header = () => {
   return (
     <S.Header>
       <S.Logo>
-        <Link to="/">Short URL</Link>
+        <Link to="/short-url">Short URL</Link>
       </S.Logo>
       <S.NavItems>
         <li>
-          <Link to="/">Create URL</Link>
+          <Link to="/short-url">Create URL</Link>
         </li>
         <li>
-          <Link to="/info">URL Information</Link>
+          <Link to="/short-url/info">URL Information</Link>
         </li>
       </S.NavItems>
     </S.Header>
