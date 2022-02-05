@@ -2,7 +2,11 @@ import React from "react";
 import * as S from "./style";
 const Details = ({ urlInfo }) => {
   const shortUrl =
-    window.location.protocol + "//" + window.location.host + "/#/" + urlInfo.id;
+    window.location.protocol +
+    "//" +
+    window.location.host +
+    "/short-url/#/" +
+    urlInfo.id;
   return (
     <S.Details>
       <p>
