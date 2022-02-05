@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/short-url" element={<Home />} />
-        <Route exact path="/short-url/:id" element={<UrlLink />} />
+        <Route exact path="/:id" element={<UrlLink />} />
         <Route exact path="/short-url/info/:id" element={<UrlDetails />} />
         <Route exact path="/short-url/info" element={<UrlInfoSearch />} />
       </Routes>
