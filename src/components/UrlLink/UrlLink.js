@@ -5,7 +5,6 @@ import * as S from "./style";
 const UrlLink = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
-  const [fullUrl, setFullUrl] = useState("");
   useEffect(() => {
     const updateAndRouteToUrl = async (data) => {
       await updateEntries(data.id, data.entries);
@@ -15,12 +14,15 @@ const UrlLink = () => {
       const data = await getDataById(id);
       if (data) {
         updateAndRouteToUrl(data);
-      }
+      } else setLoading(false);
     };
     getData();
-    setLoading(false);
   }, []);
-  return <S.UrlLink>{!loading && <h3>URL not found</h3>}</S.UrlLink>;
+  return (
+    <S.UrlLink>
+      {loading ? <h3>Loading...</h3> : <h3>URL not found</h3>}
+    </S.UrlLink>
+  );
 };
 
 export default UrlLink;
