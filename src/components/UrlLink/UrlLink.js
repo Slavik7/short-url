@@ -4,7 +4,7 @@ import { getDataById, updateEntries } from "../../firebase/db";
 import * as S from "./style";
 const UrlLink = () => {
   const { id } = useParams();
-  const [loading, setLoading] = useState(true);
+  const [ready, setReady] = useState(false);
   useEffect(() => {
     const updateAndRouteToUrl = async (data) => {
       await updateEntries(data.id, data.entries);
@@ -14,13 +14,13 @@ const UrlLink = () => {
       const data = await getDataById(id);
       if (data) {
         updateAndRouteToUrl(data);
-      } else setLoading(false);
+      } else setReady(true);
     };
     getData();
   }, []);
   return (
     <S.UrlLink>
-      {loading ? <h3>Loading...</h3> : <h3>URL not found</h3>}
+      {!ready ? <h3>Loading...</h3> : <h3>URL not found</h3>}
     </S.UrlLink>
   );
 };
