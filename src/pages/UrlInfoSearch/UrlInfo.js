@@ -9,7 +9,7 @@ const UrlInfo = () => {
     setLoading(true);
     const textSplit = text.split("/");
     const id = textSplit[textSplit.length - 1];
-    nav(`/info/${id}`);
+    nav(`/short-url/info/${id}`);
     setLoading(false);
   };
   return (

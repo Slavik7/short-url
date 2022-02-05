@@ -17,7 +17,7 @@ const Home = () => {
     const saveNewUrlData = async () => {
       const urlData = await addData(newUrl);
       setLoading(false);
-      navigate(`/info/${urlData.id}`);
+      navigate(`/short-url/info/${urlData.id}`);
     };
     saveNewUrlData();
   };
