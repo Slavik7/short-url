@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/short-url/static/js/main.a907625d.js",
+    "index.html": "/short-url/index.html",
+    "main.a907625d.js.map": "/short-url/static/js/main.a907625d.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.a907625d.js"
+  ]
+}
