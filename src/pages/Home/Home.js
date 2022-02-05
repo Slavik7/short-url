@@ -1,11 +1,10 @@
-import { nanoid } from "nanoid";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputForm from "../../components/InputForm";
 import { addData } from "../../firebase/db";
 import { createFullUrl } from "../../util/url";
 import * as S from "./style";
-const Home = ({ data, setData }) => {
+const Home = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const urlCreateHandler = async (url) => {

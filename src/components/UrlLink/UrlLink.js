@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getDataById, updateEntries } from "../../firebase/db";
 import * as S from "./style";
-const UrlLink = ({ data }) => {
+const UrlLink = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   useEffect(() => {
