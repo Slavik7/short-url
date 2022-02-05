@@ -9,7 +9,7 @@ const UrlLink = () => {
     const getData = async () => {
       const data = await getDataById(id);
       if (data) {
-        updateEntries(id, data.entries);
+        await updateEntries(id, data.entries);
         window.location.href = data.full;
       }
     };
