@@ -10,10 +10,12 @@ const UrlDetails = () => {
   useEffect(() => {
     const getData = async () => {
       const data = await getDataById(id);
-      if (data) setUrlInfo({ ...data });
+      if (data) {
+        setUrlInfo({ ...data });
+      }
+      setLoading(false);
     };
     getData();
-    setLoading(false);
   }, []);
   return (
     <S.DetailsPage>
