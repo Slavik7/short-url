@@ -12,10 +12,10 @@ function App() {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route exact path="/short-url" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/:id" element={<UrlLink />} />
-        <Route exact path="/short-url/info/:id" element={<UrlDetails />} />
-        <Route exact path="/short-url/info" element={<UrlInfoSearch />} />
+        <Route exact path="/info/:id" element={<UrlDetails />} />
+        <Route exact path="/info" element={<UrlInfoSearch />} />
       </Routes>
     </div>
   );
