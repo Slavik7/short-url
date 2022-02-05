@@ -5,12 +5,16 @@ import * as S from "./style";
 const UrlLink = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
+  const [fullUrl, setFullUrl] = useState("");
   useEffect(() => {
+    const updateAndRouteToUrl = async (data) => {
+      await updateEntries(data.id, data.entries);
+      window.location.href = data.full;
+    };
     const getData = async () => {
       const data = await getDataById(id);
       if (data) {
-        await updateEntries(id, data.entries);
-        window.location.href = data.full;
+        updateAndRouteToUrl(data);
       }
     };
     getData();
